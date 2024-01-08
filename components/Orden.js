@@ -1,10 +1,19 @@
 import Image from "next/image";
+import axios from "axios";
+import { toast } from "react-toastify";
 import { formatearDinero } from "../helpers";
 
 const Orden = ({ orden }) => {
   const { id, nombre, total, pedido } = orden;
 
-  console.log("pedido:", pedido);
+  const completarOrden = async () => {
+    try {
+      await axios.post(`/api/ordenes/${id}`);
+      toast.success("Orden lista");
+    } catch (error) {
+      toast.error("Hubo un error");
+    }
+  };
 
   return (
     <div className="border p-10 space-y-5">
@@ -35,6 +44,14 @@ const Orden = ({ orden }) => {
         <p className="mt-5 font-black text-4xl text-amber-500">
           Total a pagar: {formatearDinero(total)}
         </p>
+
+        <button
+          type="button"
+          className="bg-indigo-600 hover:bg-indigo-800 text-white mt-5 md:mt-0 py-3 px-10 uppercase font-bold rounded-lg"
+          onClick={completarOrden}
+        >
+          Completar Orden
+        </button>
       </div>
     </div>
   );

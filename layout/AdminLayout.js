@@ -21,7 +21,7 @@ export default function AdminLayout({ children, pagina }) {
         </main>
       </div>
 
-      <ToastContainer />
+      <ToastContainer theme="colored" />
     </>
   );
 }

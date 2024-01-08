@@ -8,10 +8,6 @@ export default function Admin() {
 
   const { data, error, isLoading } = useSWR("/api/ordenes", fetcher);
 
-  // console.log("data:", data);
-  // console.log("error:", error);
-  // console.log("isLoading:", isLoading);
-
   return (
     <AdminLayout pagina="Admin">
       <h1 className="text-4xl font-black">Panel de Administración</h1>
