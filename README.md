@@ -19,3 +19,7 @@ Las tecnologías utilizadas para realizar esta aplicación son las siguientes:
 - **Framework de desarrollo:** Next.js, v12.3.4.
 - **Estilado:** Tailwind CSS, v3.4.0.
 - **Consulta de api en tiempo real:** SWR, v2.2.4.
+
+---
+
+PROYECTO REALIZADO DESDE EL CURSO DE UDEMY: [React - La Guía Completa: Hooks Context Redux MERN +15 Apps](https://www.udemy.com/course/react-de-principiante-a-experto-creando-mas-de-10-aplicaciones/)
