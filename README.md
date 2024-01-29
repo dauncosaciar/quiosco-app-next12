@@ -1,34 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Resumen de App
 
-## Getting Started
+**URL de acceso:** [https://quiosco-app-next12.vercel.app/](https://quiosco-app-next12.vercel.app/)
 
-First, run the development server:
+La siguiente App trata de un **Quiosco de Comidas**, en el cual puedes elegir de un listado los platillos que desees y la cantidad de cada uno. Una vez que seleccionas los platillos, puedes ver un resumen de los seleccionado a la vez que editar o eliminar los ítems ya agregados. Finalmente, antes de confirmar un pedido, debes ingresar un nombre. Al confirmar el pedido, el mismo se guarda en una base de datos de forma persistente.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Panel Administrador
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**URL de acceso:** [https://quiosco-app-next12.vercel.app/admin](https://quiosco-app-next12.vercel.app/admin)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Todos los pedidos que son confirmados por un cliente se agregan **en tiempo real** en una ventana o panel administrador, el cual lista todos los pedidos que aún no fueron confirmados. Esto sirve para la gente de cocina encargada de preparar el pedido para el cliente. Una vez preparado el pedido, se hace click en **Completar Orden** para finalizar dicho pedido.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Tecnologías utilizadas para desarrollo
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Las tecnologías utilizadas para realizar esta aplicación son las siguientes:
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Base de datos:** MySQL.
+- **ORM para conectar con base de datos:** Prisma, v5.7.1.
+- **Framework de desarrollo:** Next.js, v12.3.4.
+- **Estilado:** Tailwind CSS, v3.4.0.
+- **Consulta de api en tiempo real:** SWR, v2.2.4.
